@@ -4,7 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>AMETHYSTOS PMFM - Galería</title> <meta name="description" content="AMETHYSTOS PMFM – Cinematic, ambient and spiritual music project.">
+    <title>AMETHYSTOS PMFM - Galería</title>
+    <meta name="description" content="AMETHYSTOS PMFM – Cinematic, ambient and spiritual music project.">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="shortcut icon" type="image/png" href="img/Amethystos-logo.png">
@@ -24,7 +25,6 @@
     <link rel="stylesheet" href="css/style.css">
 
     <style>
-   
         .platform-btn {
             width: 40px !important;
             height: 40px !important;
@@ -119,7 +119,7 @@
             color: #9b51e0 !important;
         }
 
-        /* --- NUEVOS ESTILOS ESENCIALES PARA LA GALERÍA --- */
+        /* --- ESTILOS DE GALERÍA --- */
         .gallery_item {
             position: relative;
             overflow: hidden;
@@ -152,6 +152,7 @@
             text-decoration: none !important;
             padding: 25px;
             text-align: center;
+            cursor: pointer; /* Manito para indicar clic */
         }
 
         .gallery_item:hover .gallery_overlay {
@@ -185,80 +186,22 @@
         .gallery_item:hover .gallery_overlay span {
             transform: translateY(0);
         }
-        .footer,
-        .footer_top,
-        .copy-right_text {
-            background-color: #2a0f3f !important; /* púrpura profundo */
-        }
-        .about_thumb {
-            position: relative;
-        }
-
-        .about_thumb img {
-            width: 150%;
-            max-width: none;
-            position: relative;
-            left: -180px;
-            transform: translateX(-50px) translateY(-30px);
-        }
-
-        /* --- ESTILOS RESTAURADOS PARA EL TEXTO (SEGÚN TU IMAGEN) --- */
-        .ame-title {
-            color: #800080; /* Tono amatista oscuro */
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 25px;
-        }
         
-        .ame-quote-box {
-            border-left: 3px solid #9b51e0; /* La línea vertical violeta */
-            padding-left: 20px;
-            margin-bottom: 30px;
-            font-style: italic;
-            color: #555;
-            font-weight: 500;
+        .footer, .footer_top, .copy-right_text {
+            background-color: #2a0f3f !important;
         }
 
-        .ame-subtitle {
-            color: #9b51e0; /* Violeta claro */
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-weight: 700;
-            font-size: 14px;
-            margin-top: 35px;
-            margin-bottom: 15px;
-        }
-
-        .ame-text {
-            color: #707070;
-            font-size: 15px;
-            line-height: 1.8;
-            margin-bottom: 15px;
-            text-align: justify;
-        }
-
-        .ame-highlight {
-            color: #800000; /* Tono rojizo/violeta oscuro como la imagen */
-            font-weight: 700;
-        }
-
-        .ame-bold-black {
-            color: #000;
-            font-weight: 700;
-        }
-        
         /* ESTILOS DEL BOTÓN DE IDIOMA */
         .lang-switch-container {
             position: fixed;
             bottom: 20px;
-            left: 20px; /* Lo pongo a la izquierda para no tapar el chat o botón de subir */
+            left: 20px; 
             z-index: 9999;
             font-family: 'Poppins', sans-serif;
         }
 
         .lang-btn-main {
-            background: #6E154F; /* Tu color violeta */
+            background: #6E154F;
             color: #fff;
             border: none;
             padding: 10px 20px;
@@ -275,7 +218,7 @@
         }
 
         .lang-options {
-            display: none; /* Oculto por defecto */
+            display: none;
             flex-direction: column;
             position: absolute;
             bottom: 50px;
@@ -303,7 +246,6 @@
             color: #6E154F;
         }
 
-        /* Clase para mostrar el menú */
         .show-lang {
             display: flex;
         }
@@ -544,17 +486,32 @@
         </div>
     </footer>
 
+    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
     <script src="js/vendor/jquery-1.12.4.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    
     <script src="js/owl.carousel.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/ajax-form.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/scrollIt.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/nice-select.min.js"></script>
     <script src="js/jquery.slicknav.min.js"></script>
-
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/mail-script.js"></script>
     <script src="js/main.js"></script>
 
     <script>
+        // Activación manual del efecto popup (por seguridad)
         $(document).ready(function() {
             $('.popup-image').magnificPopup({
                 type: 'image',
