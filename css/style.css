@@ -7311,5 +7311,24 @@ h6 {
   margin-right: 10px;
   font-size: 12px;
 }
+/* --- ARREGLO PARA CELULAR (RESPONSIVE) --- */
+@media only screen and (max-width: 768px) {
+    /* Achicar el título gigante */
+    .hero-area .hero-text h1 {
+        font-size: 35px !important;
+        line-height: 1.2 !important;
+    }
+    
+    /* Ajustar el texto de abajo */
+    .hero-area .hero-text p {
+        font-size: 16px !important;
+    }
+
+    /* Dar espacio arriba para que no se pegue al techo */
+    .hero-area {
+        padding-top: 120px;
+        min-height: 60vh;
+    }
+}
 
 /*# sourceMappingURL=style.css.map */
