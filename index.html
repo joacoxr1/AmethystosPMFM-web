@@ -1,0 +1,1166 @@
+<!doctype html>
+<html class="no-js" lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>AMETHYSTOS PMFM</title>
+    <meta name="description" content="AMETHYSTOS PMFM – Cinematic, ambient and spiritual music project.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" type="image/png" href="img/Amethystos-logo.png">
+    
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/audioplayer.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/gijgo.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slicknav.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+
+/* ============================= */
+/* 1. ELIMINAR BORDES MÚSICA */
+.music_field {
+    border: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+}
+.music_field::after,
+.music_field::before {
+    display: none !important;
+}
+.music_gallery .row {
+    border: none !important;
+}
+
+/* ============================= */
+/* 2. BOTONES REDONDOS PLATAFORMAS */
+.music_btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+}
+
+.platform-btn {
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50% !important;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    padding: 0 !important;
+    color: #ffffff !important;
+    font-size: 18px; /* Tamaño de icono corregido */
+    border: none !important;
+    transition: transform .2s ease, box-shadow .2s ease;
+    text-decoration: none !important;
+    box-shadow: 0 2px 5px rgba(0,0,0,.2);
+}
+
+.btn-spotify { background: #1DB954 !important; }
+.btn-youtube { background: #FF0000 !important; }
+.btn-apple   { background: #FA243C !important; }
+
+/* CORRECCIÓN: COLOR CYAN AMAZON MUSIC */
+.btn-amazon  { background: #25D1DA !important; }
+
+.platform-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,.3);
+}
+
+/* ============================= */
+
+.gallery_hover {
+    display: none !important;
+}
+
+/* ============================= */
+/* 4. REDES SOCIALES */
+.social-fb:hover {
+    background: #1877F2 !important;
+    border-color: #1877F2 !important;
+}
+.social-ig:hover {
+    background: #C13584 !important;
+    border-color: #C13584 !important;
+}
+
+/* ============================= */
+/* 5. SLIDER */
+.single_slider {
+    height: 500px !important;
+}
+@media (max-width: 768px) {
+    .single_slider {
+        height: 400px !important;
+    }
+}
+
+/* ============================= */
+/* 6. HEADER */
+/* Normal: queda como el theme */
+#sticky-header {
+    background: transparent !important;
+}
+
+/* SOLO cuando hace scroll */
+#sticky-header.sticky {
+    background: #2a0f3f !important;
+}
+
+/* ============================= */
+/* 7. FOOTER */
+.footer {
+    background: #2a0f3f !important;
+    padding-top: 80px !important;
+    padding-bottom: 20px !important;
+}
+
+.footer_top {
+    background: transparent !important;
+}
+
+.copy-right_text {
+    background: #230c35 !important;
+}
+/* --- CAMBIO DE COLOR A PÚRPURA (FOOTER COMPLETO) --- */
+.footer,
+.footer_top,
+.copy-right_text {
+    background-color: #2a0f3f !important; /* púrpura profundo */
+}
+
+/* Líneas divisorias */
+.footer_border {
+    border-color: rgba(255,255,255,0.15) !important;
+}
+
+/* Links del footer */
+.footer a,
+.footer p,
+.footer h3 {
+    color: #ffffff !important;
+}
+
+/* Hover de links */
+.footer a:hover {
+    color: #9b51e0 !important; /* violeta claro */
+}
+
+/* CORRECCIÓN DE PADDING EN FOOTER PARA IGUALAR A ABOUT.HTML */
+.footer .footer_top {
+    padding-top: 0px !important;
+    padding-bottom: 20px !important;
+    background: transparent !important;
+}
+
+.copy-right_text {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+}
+
+/* (Opcional) Asegura que no haya margen extra arriba del footer */
+.gallery_area {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+/* Imagenes  */
+.masonry-wrapper {
+        column-count: 3; /* 3 Columnas */
+        column-gap: 25px; /* Espacio entre columnas */
+    }
+    .masonry-item {
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 25px; /* Espacio abajo de cada foto */
+        break-inside: avoid; /* Evita que se corten las imágenes */
+    }
+    .masonry-item img {
+        width: 100%;
+        border-radius: 5px;
+        display: block;
+        transition: transform 0.3s ease;
+    }
+    .masonry-item:hover img {
+        transform: scale(1.03); /* Zoom suave al pasar el mouse */
+        box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+    }
+    /* Celulares: 1 sola columna */
+    @media (max-width: 768px) {
+        .masonry-wrapper { column-count: 1; }
+    }
+    
+/* ESTILOS DEL BOTÓN DE IDIOMA */
+.lang-switch-container {
+    position: fixed;
+    bottom: 20px;
+    left: 20px; /* Lo pongo a la izquierda para no tapar el chat o botón de subir */
+    z-index: 9999;
+    font-family: 'Poppins', sans-serif;
+}
+
+.lang-btn-main {
+    background: #6E154F; /* Tu color violeta */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.lang-btn-main:hover {
+    background: #4a0d34;
+    transform: scale(1.05);
+}
+
+.lang-options {
+    display: none; /* Oculto por defecto */
+    flex-direction: column;
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    min-width: 120px;
+}
+
+.lang-options button {
+    background: white;
+    border: none;
+    padding: 10px;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+    color: #333;
+}
+
+.lang-options button:hover {
+    background: #f0f0f0;
+    color: #6E154F;
+}
+
+/* Clase para mostrar el menú */
+.show-lang {
+    display: flex;
+}
+
+</style>
+
+</head>
+
+<body>
+    <header>
+        <div class="header-area ">
+            <div id="sticky-header" class="main-header-area">
+                <div class="container-fluid">
+                    <div class="header_bottom_border">
+                        <div class="row align-items-center">
+                            <div class="col-xl-3 col-lg-2">
+                                <div class="logo">
+                                    <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
+                                        <img src="img/Amethystos-logo.png" alt="Amethystos Logo" 
+                                             style="max-height: 90px; width: auto; border-radius: 50%; border: 2px solid rgba(255,255,255,0.15); margin-right: 20px;">
+                                        <span style="color: #ffffff; font-size: 28px; font-family: 'Garamond', 'Georgia', 'Times New Roman', serif; font-weight: 400; letter-spacing: 6px; text-transform: uppercase;">
+                                            PMFM
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-7">
+                                <div class="main-menu  d-none d-lg-block">
+                                    <nav>
+                                        <ul id="navigation">
+                                            <li><a class="active" href="index.html" data-i18n="menu_home">Inicio</a></li>
+                                            <li><a href="aboutpf.html" data-i18n="menu_about">Sobre Mí</a></li>
+                                            <li><a href="track.html" data-i18n="menu_music">Música</a></li>
+                                            <li><a href="mygalery.html" data-i18n="menu_gallery">Galería</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            
+                            <div class="col-xl-3 col-lg-3 d-none d-lg-block">
+                                <div class="social_icon text-right">
+                                    <ul>
+                                        <li><a href="https://open.spotify.com/intl-es/artist/0zDPwGObZyLmZrEGTw8aWN?si=XFyIAQO6QdWBp8bghQ9x7Q" target="_blank" class="platform-btn btn-spotify" title="Spotify"><i class="fa fa-spotify"></i></a></li>
+                                        <li><a href="https://www.youtube.com/@amethystospmfm" target="_blank" class="platform-btn btn-youtube" title="YouTube"><i class="fa fa-youtube-play"></i></a></li>
+                                        <li><a href="https://music.apple.com/es/artist/amethystos/1565143172" target="_blank" class="platform-btn btn-apple" title="Apple Music"><i class="fa fa-apple"></i></a></li>
+                                        <li><a href="https://music.amazon.es/artists/B093TL82TT/amethystos" target="_blank" class="platform-btn btn-amazon" title="Amazon Music"><i class="fa fa-amazon"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="col-12">
+                                <div class="mobile_menu d-block d-lg-none"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </header>
+    
+    <div class="slider_area">
+        <div class="single_slider d-flex align-items-center slider_bg_1 overlay2" style="background-image: url(img/Banner-Provisorio.jpg); background-size: cover; background-position: center;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="slider_text text-center " style="margin-top: -50px;">
+                            <h3 style="font-family: 'Garamond', 'Georgia', serif; font-weight: 400; font-size: 60px; letter-spacing: 4px; text-shadow: 2px 2px 10px #000000; margin-bottom: 10px; color: #fff;">
+                                AMETHYSTOS PMFM
+                            </h3>
+                            <p data-i18n="hero_subtitle" style="font-size: 20px; font-style: italic; letter-spacing: 2px; text-shadow: 1px 1px 5px #000000; color: #ddd;">
+                                Composiciones Cinematográficas, ambientales y Espirituales
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+  <div class="about_area">
+        <div class="container">
+            <div class="row align-items-center">
+                
+                <div class="col-xl-5 col-md-6">
+                    <div class="about_thumb">
+                        <img class="img-fluid" src="img/gallery/alquimia2.jpeg" alt="Portada Alquimia" 
+                             style="box-shadow: 0 10px 30px rgba(0,0,0,0.3); border-radius: 4px;">
+                    </div>
+                </div>
+
+                <div class="col-xl-7 col-md-6">
+                    <div class="about_info">
+                        <h3 style="color: #9b51e0; font-size: 42px; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 2px; font-weight: 700;">
+                            ALQUIMIA
+                        </h3>
+                        
+                        <p data-i18n="alquimia_desc" style="color: #333333; font-size: 18px; line-height: 1.8; margin-bottom: 30px; font-style: normal;">
+                            Un viaje sonoro donde los elementos musicales antiguos destruyen y renuevan, como la alquimia misma. Más que una aventura, una evolución del alma a través del sonido.
+                        </p>
+
+                        <div style="margin-top: 25px;">
+                            <span data-i18n="coming_soon" style="
+                                color: #9b51e0; /* Color Púrpura */
+                                font-weight: 800; /* Bien negrita */
+                                letter-spacing: 3px;
+                                font-size: 18px;
+                                text-transform: uppercase;
+                                display: inline-block;
+                                border-bottom: 3px solid #9b51e0; /* Una línea sutil debajo para destacar */
+                                padding-bottom: 5px;
+                            ">
+                                PRÓXIMAMENTE
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="youtube_video_area">
+        <div class="container-fluid p-0">
+            <div class="row no-gutters">
+                <div class="col-xl-3 col-lg-3 col-md-6">
+                    <div class="single_video">
+                        <div class="thumb">
+                            <img src="img/singles/cosmicsky.jpeg" alt="">
+                        </div>
+                        <div class="hover_elements">
+                            <div class="video">
+                                <a class="popup-video" href="https://www.youtube.com/watch?v=hbn44NpQEwA"> 
+                                    <i class="fa fa-play"></i>
+                                </a>
+                            </div>
+                            <div class="hover_inner">
+                                <span data-i18n="single_2024" style="color: #ffffff !important; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">
+                                    Single (2024)
+                                </span>
+                                <h3 style="margin-top: 8px;">
+                                    <a href="#" style="color: #ffffff !important; font-weight: 700; font-size: 26px;">
+                                        Cosmic Sky 
+                                    </a>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6">
+                    <div class="single_video">
+                        <div class="thumb">
+                            <img src="img/singles/hetkia.jpeg" alt="">
+                        </div>
+                        <div class="hover_elements">
+                            <div class="video">
+                                <a class="popup-video" href="https://www.youtube.com/watch?v=XTextY0ckuo"> 
+                                    <i class="fa fa-play"></i>
+                                </a>
+                            </div>
+                            <div class="hover_inner">
+                                <span data-i18n="single_2024" style="color: #ffffff !important; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">
+                                    Single (2024)
+                                </span>
+                                <h3>
+                                    <a href="#" style="color: #ffffff !important; font-weight: 700; font-size: 24px; letter-spacing: 1px;">
+                                        Hetkiä
+                                    </a>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6">
+                    <div class="single_video">
+                        <div class="thumb">
+                            <img src="img/gallery/beyondfprovindex.jpeg" alt="">
+                        </div>
+                        <div class="hover_elements">
+                            <div class="video">
+                                <a class="popup-video" href="https://www.youtube.com/watch?v=Ng41OL7-Kuw"> 
+                                    <i class="fa fa-play"></i>
+                                </a>
+                            </div>
+                            <div class="hover_inner">
+                                <span data-i18n="single_2024" style="color: #ffffff !important; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">
+                                    Single (2024)
+                                </span>
+                                <h3>
+                                    <a href="#" style="color: #ffffff !important; font-weight: 700; font-size: 24px; letter-spacing: 1px;">
+                                        Beyond Fantasy
+                                    </a>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6">
+                    <div class="single_video">
+                        <div class="thumb">
+                            <img src="img/gallery/andromedaprovindex.png" alt="">
+                        </div>
+                        <div class="hover_elements">
+                            <div class="video">
+                                <a class="popup-video" href="https://www.youtube.com/watch?v=_PaTJLpxv70"> 
+                                    <i class="fa fa-play"></i>
+                                </a>
+                            </div>
+                            <div class="hover_inner">
+                                <span style="color: #ffffff !important; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">
+                                    Single (2022)
+                                </span>
+                                <h3>
+                                    <a href="#" style="color: #ffffff !important; font-weight: 700; font-size: 24px; letter-spacing: 1px;">
+                                        Andrómeda
+                                    </a>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="music_area music_gallery">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="section_title text-center mb-65">
+                        <h2 data-i18n="latest_release">Último Lanzamiento</h2>
+<h3 style="color: #6E154F; text-transform: uppercase; letter-spacing: 2px; font-weight: 700;">
+  Metamorfosis
+</h3>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row align-items-center justify-content-center mb-20">
+                <div class="col-xl-10">
+                    <div class="row align-items-center">
+                        <div class="col-xl-8 col-md-8">
+                            <div class="music_field">
+                                <div class="thumb">
+                                    <img src="img/metamorfosis.jpeg" alt="Metamorfosis" style="width: 100px; height: 100px; object-fit: cover; border-radius: 5px;">
+                                </div>
+                                <div class="audio_name">
+                                    <div class="name">
+                                        <h4>Ecos del Alma</h4> <p>Metamorfosis (2025)</p>
+                                    </div>
+                                    <audio preload="none" controls>
+                                        <source src="mp3/01EcosAlmaDEMO.mp3" type="audio/mpeg">
+                                    </audio>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-4">
+                            <div class="music_btn">
+                                <a href="https://open.spotify.com/intl-es/track/2T78kpSFiANkznhAHEifJ8?si=d127df9b2b814833" target="_blank" class="platform-btn btn-spotify" title="Spotify"><i class="fa fa-spotify"></i></a>
+                                <a href="https://music.youtube.com/watch?v=D6TPSAUZD_U&si=uE4Z4lQD-evByxiM" target="_blank" class="platform-btn btn-youtube" title="YouTube"><i class="fa fa-youtube-play"></i></a>
+                                <a href="https://music.apple.com/es/song/ecos-del-alma/1851596451" target="_blank" class="platform-btn btn-apple" title="Apple Music"><i class="fa fa-apple"></i></a>
+                                <a href="https://music.amazon.es/tracks/B0G1G5LL11?marketplaceId=A1RKKUPIHCS9HS&musicTerritory=ES&ref=dm_sh_zAlWaQq1MIR3W2YDWpOmrhKWg" target="_blank" class="platform-btn btn-amazon" title="Amazon Music"><i class="fa fa-amazon"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row align-items-center justify-content-center mb-20">
+                <div class="col-xl-10">
+                    <div class="row align-items-center">
+                        <div class="col-xl-8 col-md-8">
+                            <div class="music_field">
+                                <div class="thumb">
+                                    <img src="img/metamorfosis.jpeg" alt="Metamorfosis" style="width: 100px; height: 100px; object-fit: cover; border-radius: 5px;">
+                                </div>
+                                <div class="audio_name">
+                                    <div class="name">
+                                        <h4>Sombras en Transición</h4> <p>Metamorfosis (2025)</p>
+                                    </div>
+                                    <audio preload="none" controls>
+                                        <source src="mp3/02SombrasTransicionDEMO.mp3" type="audio/mpeg">
+                                    </audio>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-4">
+                            <div class="music_btn">
+                                <a href="https://open.spotify.com/intl-es/track/7nNIbTga5cm3GHrwxSNlFx?si=d340d26bf22f463a" target="_blank" class="platform-btn btn-spotify" title="Spotify"><i class="fa fa-spotify"></i></a>
+                                <a href="https://music.youtube.com/watch?v=dXW-1lfq3TI&si=hBJmb5KlZF0oHVD7" target="_blank" class="platform-btn btn-youtube" title="YouTube"><i class="fa fa-youtube-play"></i></a>
+                                <a href="https://music.apple.com/es/song/sombras-en-transici%C3%B3n/1851596453" target="_blank" class="platform-btn btn-apple" title="Apple Music"><i class="fa fa-apple"></i></a>
+                                <a href="https://music.amazon.es/tracks/B0G1F1NSXX?marketplaceId=A1RKKUPIHCS9HS&musicTerritory=ES&ref=dm_sh_pgfd6AKg9hGwEdaQLb9ppHM3k" target="_blank" class="platform-btn btn-amazon" title="Amazon Music"><i class="fa fa-amazon"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row align-items-center justify-content-center mb-20">
+                <div class="col-xl-10">
+                    <div class="row align-items-center">
+                        <div class="col-xl-8 col-md-8">
+                            <div class="music_field">
+                                <div class="thumb">
+                                    <img src="img/metamorfosis.jpeg" alt="Metamorfosis" style="width: 100px; height: 100px; object-fit: cover; border-radius: 5px;">
+                                </div>
+                                <div class="audio_name">
+                                    <div class="name">
+                                        <h4>Fragmentos de Metamorfosis</h4> <p>Metamorfosis (2025)</p>
+                                    </div>
+                                    <audio preload="none" controls>
+                                        <source src="mp3/03FragmentosMetamorfosisDEMO.mp3" type="audio/mpeg">
+                                    </audio>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-4">
+                            <div class="music_btn">
+                                <a href="https://open.spotify.com/intl-es/track/4IiU7Zbh8EqbIE179SQEnn?si=797a118bba7d4e4d" target="_blank" class="platform-btn btn-spotify" title="Spotify"><i class="fa fa-spotify"></i></a>
+                                <a href="https://music.youtube.com/watch?v=2maj6ypnav4&si=-7Y19nnetpY96l81" target="_blank" class="platform-btn btn-youtube" title="YouTube"><i class="fa fa-youtube-play"></i></a>
+                                <a href="https://music.apple.com/es/song/fragmentos-de-metamorfosis/1851596454" target="_blank" class="platform-btn btn-apple" title="Apple Music"><i class="fa fa-apple"></i></a>
+                                <a href="https://music.amazon.es/tracks/B0G1DMXTW2?marketplaceId=A1RKKUPIHCS9HS&musicTerritory=ES&ref=dm_sh_yaiEwcqWfF1cgxxkS3iGu21oJ" target="_blank" class="platform-btn btn-amazon" title="Amazon Music"><i class="fa fa-amazon"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row align-items-center justify-content-center mb-20">
+                <div class="col-xl-10">
+                    <div class="row align-items-center">
+                        <div class="col-xl-8 col-md-8">
+                            <div class="music_field">
+                                <div class="thumb">
+                                    <img src="img/metamorfosis.jpeg" alt="Metamorfosis" style="width: 100px; height: 100px; object-fit: cover; border-radius: 5px;">
+                                </div>
+                                <div class="audio_name">
+                                    <div class="name">
+                                        <h4>Renacimiento en Movimiento</h4> <p>Metamorfosis (2025)</p>
+                                    </div>
+                                    <audio preload="none" controls>
+                                        <source src="mp3/04RenacimientoMovimientoDEMO.mp3" type="audio/mpeg">
+                                    </audio>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-4">
+                            <div class="music_btn">
+                                <a href="https://open.spotify.com/intl-es/track/5PqIvG2Blb4JYo2tMBd05R?si=9e83c5ed101e4928" target="_blank" class="platform-btn btn-spotify" title="Spotify"><i class="fa fa-spotify"></i></a>
+                                <a href="https://music.youtube.com/watch?v=3g5-5t9vZVw&si=tgp8eGSgq4vACAdD" target="_blank" class="platform-btn btn-youtube" title="YouTube"><i class="fa fa-youtube-play"></i></a>
+                                <a href="https://music.apple.com/es/song/renacimiento-en-movimiento/1851596455" target="_blank" class="platform-btn btn-apple" title="Apple Music"><i class="fa fa-apple"></i></a>
+                                <a href="https://music.amazon.es/tracks/B0G1F72F62?marketplaceId=A1RKKUPIHCS9HS&musicTerritory=ES&ref=dm_sh_jGiVYh0Czhb2mOH644KGj8W8z" target="_blank" class="platform-btn btn-amazon" title="Amazon Music"><i class="fa fa-amazon"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row align-items-center justify-content-center mb-20">
+                <div class="col-xl-10">
+                    <div class="row align-items-center">
+                        <div class="col-xl-8 col-md-8">
+                            <div class="music_field">
+                                <div class="thumb">
+                                    <img src="img/metamorfosis.jpeg" alt="Metamorfosis" style="width: 100px; height: 100px; object-fit: cover; border-radius: 5px;">
+                                </div>
+                                <div class="audio_name">
+                                    <div class="name">
+                                        <h4>Euphoria</h4> <p>Metamorfosis (2025)</p>
+                                    </div>
+                                    <audio preload="none" controls>
+                                        <source src="mp3/06EuphoriaMetamorfosisDEMO.mp3" type="audio/mpeg">
+                                    </audio>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-4">
+                            <div class="music_btn">
+                                <a href="https://open.spotify.com/intl-es/track/09qb0r20RzTFZA0co7Jpwp?si=bfa8fcf0023d4f32" target="_blank" class="platform-btn btn-spotify" title="Spotify"><i class="fa fa-spotify"></i></a>
+                                <a href="https://music.youtube.com/watch?v=ZTlXbVdWWtc&si=All9bUan2yiygtOo" target="_blank" class="platform-btn btn-youtube" title="YouTube"><i class="fa fa-youtube-play"></i></a>
+                                <a href="https://music.apple.com/es/song/euphoria/1851596457" target="_blank" class="platform-btn btn-apple" title="Apple Music"><i class="fa fa-apple"></i></a>
+                                <a href="https://music.amazon.es/tracks/B0G1DNR139?marketplaceId=A1RKKUPIHCS9HS&musicTerritory=ES&ref=dm_sh_1kG0ZtXwdNZiGeIE0qsj9DA5X" target="_blank" class="platform-btn btn-amazon" title="Amazon Music"><i class="fa fa-amazon"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row align-items-center justify-content-center mb-20">
+                <div class="col-xl-10">
+                    <div class="row align-items-center">
+                        <div class="col-xl-8 col-md-8">
+                            <div class="music_field">
+                                <div class="thumb">
+                                    <img src="img/metamorfosis.jpeg" alt="Metamorfosis" style="width: 100px; height: 100px; object-fit: cover; border-radius: 5px;">
+                                </div>
+                                <div class="audio_name">
+                                    <div class="name">
+                                        <h4>La Séptima Forma</h4> <p>Metamorfosis (2025)</p>
+                                    </div>
+                                    <audio preload="none" controls>
+                                        <source src="mp3/07SeptimaFormaMetamorfosisDEMO.mp3" type="audio/mpeg">
+                                    </audio>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-4">
+                            <div class="music_btn">
+                                <a href="https://open.spotify.com/intl-es/track/2j4jFvSJ1C2s6lWElYt3w0?si=5fdbc7c65b114831" target="_blank" class="platform-btn btn-spotify" title="Spotify"><i class="fa fa-spotify"></i></a>
+                                <a href="https://music.youtube.com/watch?v=RnRa3Y7dBhY&si=TodLma5gQsbiCjg0" target="_blank" class="platform-btn btn-youtube" title="YouTube"><i class="fa fa-youtube-play"></i></a>
+                                <a href="https://music.apple.com/es/song/la-s%C3%A9ptima-forma/1851596458" target="_blank" class="platform-btn btn-apple" title="Apple Music"><i class="fa fa-apple"></i></a>
+                                <a href="https://music.amazon.es/tracks/B0G1FN8T97?marketplaceId=A1RKKUPIHCS9HS&musicTerritory=ES&ref=dm_sh_ll5GPGEpqQDkDFdD1Woy4chvr" target="_blank" class="platform-btn btn-amazon" title="Amazon Music"><i class="fa fa-amazon"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row align-items-center justify-content-center mb-20">
+                <div class="col-xl-10">
+                    <div class="row align-items-center">
+                        <div class="col-xl-8 col-md-8">
+                            <div class="music_field">
+                                <div class="thumb">
+                                    <img src="img/metamorfosis.jpeg" alt="Metamorfosis" style="width: 100px; height: 100px; object-fit: cover; border-radius: 5px;">
+                                </div>
+                                <div class="audio_name">
+                                    <div class="name">
+                                        <h4>El Último Umbral</h4> <p>Metamorfosis (2025)</p>
+                                    </div>
+                                    <audio preload="none" controls>
+                                        <source src="mp3/05UltimoUmbralDEMO.mp3" type="audio/mpeg">
+                                    </audio>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-4">
+                            <div class="music_btn">
+                                <a href="https://open.spotify.com/intl-es/track/7ad3ZLdJpeASeiHkZseXz8?si=c528141345ab41d4" target="_blank" class="platform-btn btn-spotify" title="Spotify"><i class="fa fa-spotify"></i></a>
+                                <a href="https://music.youtube.com/watch?v=SHUE3Iospvg&si=2ZYZUFZHytusHxEt" target="_blank" class="platform-btn btn-youtube" title="YouTube"><i class="fa fa-youtube-play"></i></a>
+                                <a href="https://music.apple.com/es/song/el-%C3%BAltimo-umbral/1851596456" target="_blank" class="platform-btn btn-apple" title="Apple Music"><i class="fa fa-apple"></i></a>
+                                <a href="https://music.amazon.es/tracks/B0G1FWBRS8?marketplaceId=A1RKKUPIHCS9HS&musicTerritory=ES&ref=dm_sh_ulv9pRahnCOYtfyNybI5MUdwx" target="_blank" class="platform-btn btn-amazon" title="Amazon Music"><i class="fa fa-amazon"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+<style>
+    /* Contenedor tipo Pinterest */
+    .masonry-wrapper {
+        column-count: 3; /* 3 Columnas en PC */
+        column-gap: 20px; /* Espacio entre columnas */
+    }
+    
+    /* Cada bloque de imagen */
+    .masonry-item {
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 20px; /* Espacio abajo de cada foto */
+        break-inside: avoid; /* Evita que se corten las fotos */
+        border-radius: 5px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .masonry-item img {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: transform 0.3s ease;
+    }
+
+    /* Efecto Zoom sutil al pasar el mouse */
+    .masonry-item:hover img {
+        transform: scale(1.05);
+    }
+
+    /* Responsivo: En celulares se pone en 1 sola columna */
+    @media (max-width: 768px) {
+        .masonry-wrapper {
+            column-count: 1;
+        }
+    }
+</style>
+
+<div class="gallery_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="section_title text-center mb-65">
+                    <h3 data-i18n="gallery_title">Galería de Imágenes</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="masonry-wrapper">
+
+            <div class="masonry-item">
+                <div class="single-gallery">
+                    <div class="portfolio-img">
+                        <img src="img/gallery/septima.jpeg" alt="">
+                    </div>
+                    <div class="gallery_hover">
+                        <a class="popup-image" href="img/gallery/septima.jpeg"><i class="ti-plus"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="masonry-item">
+                <div class="single-gallery">
+                    <div class="portfolio-img">
+                        <img src="img/gallery/messfragme.jpeg" alt="">
+                    </div>
+                    <div class="gallery_hover">
+                        <a class="popup-image" href="img/gallery/messfragme.jpeg"><i class="ti-plus"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="masonry-item">
+                <div class="single-gallery">
+                    <div class="portfolio-img">
+                        <img src="img/gallery/gif/moonpmfm.gif" alt="">
+                    </div>
+                    <div class="gallery_hover">
+                        <a class="popup-image" href="img/gallery/gif/moonpmfm.gif"><i class="ti-plus"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="masonry-item">
+                <div class="single-gallery">
+                    <div class="portfolio-img">
+                        <img src="img/gallery/messsombra.jpeg" alt="">
+                    </div>
+                    <div class="gallery_hover">
+                        <a class="popup-image" href="img/gallery/messsombra.jpeg"><i class="ti-plus"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="masonry-item">
+                <div class="single-gallery">
+                    <div class="portfolio-img">
+                        <img src="img/gallery/messumbral.jpeg" alt="">
+                    </div>
+                    <div class="gallery_hover">
+                        <a class="popup-image" href="img/gallery/messumbral.jpeg"><i class="ti-plus"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="masonry-item">
+                <div class="single-gallery">
+                    <div class="portfolio-img">
+                        <img src="img/gallery/messeuphoria.jpeg" alt="">
+                    </div>
+                    <div class="gallery_hover">
+                        <a class="popup-image" href="img/gallery/messeuphoria.jpeg"><i class="ti-plus"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="masonry-item">
+                <div class="single-gallery">
+                    <div class="portfolio-img">
+                        <img src="img/gallery/messseptima.jpeg" alt="">
+                    </div>
+                    <div class="gallery_hover">
+                        <a class="popup-image" href="img/gallery/messseptima.jpeg"><i class="ti-plus"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="masonry-item">
+                <div class="single-gallery">
+                    <div class="portfolio-img">
+                        <img src="img/gallery/messrenacimiento.jpeg" alt="">
+                    </div>
+                    <div class="gallery_hover">
+                        <a class="popup-image" href="img/gallery/messrenacimiento.jpeg"><i class="ti-plus"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="masonry-item">
+                <div class="single-gallery">
+                    <div class="portfolio-img">
+                        <img src="img/gallery/gif/moonpmfm2.gif" alt="">
+                    </div>
+                    <div class="gallery_hover">
+                        <a class="popup-image" href="img/gallery/gif/moonpmfm2.gif"><i class="ti-plus"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div> </div>
+</div>
+    
+    <div class="contact_rsvp" style="display: none;">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="text text-center">
+                        <br><br><br> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <div class="footer_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-md-6">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                AMETHYSTOS
+                            </h3>
+                            <p data-i18n="footer_bio" class="sub_text" style="font-style: italic; margin-bottom: 20px;">
+                                La música de AMETHYSTOS PMFM nace del silencio interior. Cada obra es una exploración espiritual, una búsqueda de lo invisible a través del sonido. No hay rostro, no hay espectáculo: solo atmósfera, emoción y contemplación.
+                            </p>
+                            <div class="social_icon">
+                                <a href="https://www.paypal.com/paypalme/Pablomfm" target="_blank" class="boxed-btn" style="background: #0070BA; color: #ffffff !important; border-color: #0070BA; padding: 10px 20px; font-size: 14px;" title="PayPal">
+                                    <span data-i18n="footer_offering"><i class="fa fa-paypal"></i> Ofrenda (PayPal)</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-5 col-md-5 offset-xl-1">
+                        <div class="footer_widget">
+                            <h3 class="footer_title" data-i18n="footer_contact_title">
+                                Contacto
+                            </h3>
+                            <ul>
+                                <li>
+                                    <a href="mailto:AMETHYSTOSPMFM@GMAIL.COM">
+                                        <i class="fa fa-envelope"></i> amethystospmfm@gmail.com
+                                    </a>
+                                </li>
+                                <li>
+
+                                </li>
+                            </ul>
+                            
+ <div class="socail_links">
+    <ul>
+        <li>
+            <a href="https://www.facebook.com/people/Amethystos-Pmfm/100067537028735/" target="_blank" class="social-fb" title="Facebook">
+                <i class="fa fa-facebook"></i>
+            </a>
+        </li>
+        <li>
+            <a href="https://www.instagram.com/amethystospmfm/" target="_blank" class="social-ig" title="Instagram">
+                <i class="fa fa-instagram"></i>
+            </a>
+        </li>
+        
+<li>
+    <a href="https://www.tiktok.com/@amethystospmfm" target="_blank" title="TikTok"
+       style="display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; background-color: #ffffff; border-radius: 50%; vertical-align: middle; text-decoration: none;">
+        
+        <img src="img/gallery/tik-tok.png" alt="TikTok" style="width: 24px; height: auto; border: none;">
+    </a>
+</li>
+        
+    </ul>
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="copy-right_text">
+            <div class="container">
+                <div class="footer_border"></div>
+                <div class="row">
+                    <div class="col-xl-7 col-md-6">
+<p class="copy_right" data-i18n="footer_copyright">
+    Copyright ©<script>document.write(new Date().getFullYear());</script> AMETHYSTOS PMFM | Todos los derechos reservados.
+    <br> Plantilla creada por <a href="https://colorlib.com" target="_blank" style="color: #ccc; font-size: 12px; text-decoration: none;">Colorlib</a> 
+    | Imagen del banner: arte digital · autor no identificado.
+</p>
+                    </div>
+                    <div class="col-xl-5 col-md-6">
+                        <div class="footer_links">
+                            <ul>
+                                <li><a href="index.html" data-i18n="menu_home">Inicio</a></li>
+                                <li><a href="aboutpf.html" data-i18n="menu_about">Sobre Mí</a></li>
+                                <li><a href="track.html" data-i18n="menu_music">Música</a></li>
+                                <li><a href="mygalery.html" data-i18n="menu_gallery">Galería</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
+            crossorigin="anonymous">
+    </script>
+    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/ajax-form.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/audioplayer.js"></script>
+    <script src="js/scrollIt.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/nice-select.min.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/gijgo.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/mail-script.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            
+            // 1. Activar el reproductor de audio
+            $('audio').audioPlayer({
+            });
+
+            // 2. Activar el video con la configuración especial para YouTube
+            $('.popup-video').magnificPopup({
+                type: 'iframe',
+                iframe: {
+                    markup: '<div class="mfp-iframe-scaler">'+
+                            '<div class="mfp-close"></div>'+
+                            '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>'+
+                            '</div>',
+                    patterns: {
+                        youtube: {
+                            index: 'youtube.com/', 
+                            id: 'v=', 
+                            src: 'https://www.youtube.com/embed/%id%?autoplay=1' 
+                        }
+                    },
+                    srcAction: 'iframe_src', 
+                },
+                mainClass: 'mfp-fade',
+                removalDelay: 160,
+                preloader: false,
+                fixedContentPos: false
+            });
+
+            // 3. Activar la galeria de imágenes (lightbox)
+            $('.popup-image').magnificPopup({
+                type: 'image',
+                gallery: {
+                    enabled: true, 
+                    tPrev: 'Anterior',
+                    tNext: 'Siguiente',
+                    tCounter: '%curr% de %total%'
+                },
+                mainClass: 'mfp-with-zoom',
+                zoom: {
+                    enabled: true,
+                    duration: 300,
+                    easing: 'ease-in-out',
+                    opener: function(openerElement) {
+                        return openerElement.is('img') ? openerElement : openerElement.find('img');
+                    }
+                }
+            });
+
+            // 4. Auto-Pausa
+            $('.platform-btn').on('click', function() {
+                $('audio').each(function(){
+                    this.pause(); 
+                });
+            });
+
+            // --- VOLUMEN (50%) ---
+            setTimeout(function() {
+                $('audio').each(function() {
+                    this.volume = 0.5; // Volumen real al 50%
+                });
+             
+                $('.audioplayer-volume-adjust div div').css('width', '50%');
+            }, 500);
+
+            // NUEVO: ACTIVAR ISOTOPE PARA LA GALERIA DINAMICA
+            var $grid = $('.grid').imagesLoaded( function() {
+                $grid.isotope({
+                    itemSelector: '.grid-item',
+                    percentPosition: true,
+                    masonry: {
+                        columnWidth: '.grid-item'
+                    }
+                });
+            });
+
+        });
+    </script>
+    <div class="lang-switch-container">
+    <button onclick="toggleLangMenu()" class="lang-btn-main">🌐 Idioma / Language</button>
+    <div id="lang-options" class="lang-options">
+        <button onclick="changeLanguage('es')">🇪🇸 Español</button>
+        <button onclick="changeLanguage('en')">🇺🇸 English</button>
+        <button onclick="changeLanguage('ru')">🇷🇺 Русский</button>
+    </div>
+</div>
+<script>
+    // 1. EL DICCIONARIO DE TRADUCCIONES
+    // Aquí tienes que ir agregando tus textos
+    const translations = {
+        es: {
+            "menu_home": "Inicio",
+            "menu_about": "Sobre Mí",
+            "menu_music": "Música",
+            "menu_gallery": "Galería",
+            "hero_subtitle": "Composiciones Cinematográficas, ambientales y Espirituales",
+            "alquimia_desc": "Un viaje sonoro donde los elementos musicales antiguos destruyen y renuevan, como la alquimia misma. Más que una aventura, una evolución del alma a través del sonido.",
+            "coming_soon": "PRÓXIMAMENTE",
+            "single_2024": "Single (2024)",
+            "latest_release": "Último Lanzamiento",
+            "gallery_title": "Galería de Imágenes",
+            "footer_bio": "La música de AMETHYSTOS PMFM nace del silencio interior. Cada obra es una exploración espiritual, una búsqueda de lo invisible a través del sonido. No hay rostro, no hay espectáculo: solo atmósfera, emoción y contemplación.",
+            "footer_offering": '<i class="fa fa-paypal"></i> Ofrenda (PayPal)',
+            "footer_contact_title": "Contacto",
+            "footer_copyright": "Copyright ©2025 AMETHYSTOS PMFM | Todos los derechos reservados.<br> Plantilla creada por <a href='https://colorlib.com' target='_blank' style='color: #ccc; font-size: 12px; text-decoration: none;'>Colorlib</a> | Imagen del banner: arte digital · autor no identificado."
+        },
+        en: {
+            "menu_home": "Home",
+            "menu_about": "About Me",
+            "menu_music": "Music",
+            "menu_gallery": "Gallery",
+            "hero_subtitle": "Cinematic, Ambient and Spiritual Compositions",
+            "alquimia_desc": "A sonic journey where ancient musical elements destroy and renew, like alchemy itself. More than an adventure, an evolution of the soul through sound.",
+            "coming_soon": "COMING SOON",
+            "single_2024": "Single (2024)",
+            "latest_release": "Latest Release",
+            "gallery_title": "Image Gallery",
+            "footer_bio": "The music of AMETHYSTOS PMFM is born from inner silence. Each work is a spiritual exploration, a search for the invisible through sound. No face, no spectacle: only atmosphere, emotion, and contemplation.",
+            "footer_offering": '<i class="fa fa-paypal"></i> Offering (PayPal)',
+            "footer_contact_title": "Contact",
+            "footer_copyright": "Copyright ©2025 AMETHYSTOS PMFM | All rights reserved.<br> Template made by <a href='https://colorlib.com' target='_blank' style='color: #ccc; font-size: 12px; text-decoration: none;'>Colorlib</a> | Banner image: digital art · author unidentified."
+        },
+        ru: {
+            "menu_home": "Главная",
+            "menu_about": "Обо мне",
+            "menu_music": "Музыка",
+            "menu_gallery": "Галерея",
+            "hero_subtitle": "Кинематографические, эмбиентные и духовные композиции",
+            "alquimia_desc": "Звуковое путешествие, где древние музыкальные элементы разрушают и обновляют, подобно самой алхимии. Больше, чем приключение — эволюция души через звук.",
+            "coming_soon": "СКОРО",
+            "single_2024": "Сингл (2024)",
+            "latest_release": "Последний релиз",
+            "gallery_title": "Галерея изображений",
+            "footer_bio": "Музыка AMETHYSTOS PMFM рождается из внутренней тишины. Каждое произведение — это духовное исследование, поиск невидимого через звук. Никаких лиц, никакого зрелища: только атмосфера, эмоции и созерцание.",
+            "footer_offering": '<i class="fa fa-paypal"></i> Пожертвование (PayPal)',
+            "footer_contact_title": "Контакты",
+            "footer_copyright": "Авторское право ©2025 AMETHYSTOS PMFM | Все права защищены.<br> Шаблон создан <a href='https://colorlib.com' target='_blank' style='color: #ccc; font-size: 12px; text-decoration: none;'>Colorlib</a> | Изображение баннера: цифровое искусство · автор неизвестен."
+        }
+    };
+
+    // 2. FUNCIÓN PARA CAMBIAR EL IDIOMA
+    function changeLanguage(lang) {
+        // Guardar preferencia en el navegador
+        localStorage.setItem('selectedLang', lang);
+
+        // Buscar todos los elementos que tengan el atributo "data-i18n"
+        const elements = document.querySelectorAll('[data-i18n]');
+        
+        elements.forEach(element => {
+            const key = element.getAttribute('data-i18n');
+            // Si existe la traducción, la ponemos
+            if (translations[lang][key]) {
+                // Usamos innerHTML para respetar enlaces e iconos (como en PayPal)
+                element.innerHTML = translations[lang][key];
+            }
+        });
+
+        // Cerrar el menú después de elegir
+        document.getElementById('lang-options').classList.remove('show-lang');
+    }
+
+    // 3. ABRIR/CERRAR MENÚ
+    function toggleLangMenu() {
+        document.getElementById('lang-options').classList.toggle('show-lang');
+    }
+
+    // 4. AL CARGAR LA PÁGINA: VERIFICAR IDIOMA GUARDADO
+    document.addEventListener('DOMContentLoaded', () => {
+        const savedLang = localStorage.getItem('selectedLang') || 'es'; // Español por defecto
+        changeLanguage(savedLang);
+    });
+     // Template made by Colorlib -- Customized by Rodriguez Joaquin. 18/01/26 //
+</script>
+</body>
+
+</html>

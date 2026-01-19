@@ -1,0 +1,702 @@
+<!doctype html>
+<html class="no-js" lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>AMETHYSTOS PMFM - Galería</title> <meta name="description" content="AMETHYSTOS PMFM – Cinematic, ambient and spiritual music project.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" type="image/png" href="img/Amethystos-logo.png">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/audioplayer.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/gijgo.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slicknav.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+   
+        .platform-btn {
+            width: 40px !important;
+            height: 40px !important;
+            border-radius: 50% !important;
+            display: inline-flex !important;
+            align-items: center;
+            justify-content: center;
+            padding: 0 !important;
+            color: #ffffff !important;
+            font-size: 18px;
+            border: none !important;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            text-decoration: none !important;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-spotify { background: #1DB954 !important; }
+        .btn-youtube { background: #FF0000 !important; }
+        .btn-apple { background: #FA243C !important; }
+        .btn-amazon { background: #25D1DA !important; }
+
+        .platform-btn:hover {
+            transform: scale(1.1);
+            color: #fff !important;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .social-fb:hover {
+            background-color: #1877F2 !important;
+            border-color: #1877F2 !important;
+            color: #fff !important;
+        }
+
+        .social-ig:hover {
+            background-color: #C13584 !important;
+            border-color: #C13584 !important;
+            color: #fff !important;
+        }
+
+        .footer {
+            background: #2a0f3f !important;
+            padding-top: 80px !important;
+            padding-bottom: 20px !important;
+        }
+
+        .footer .footer_top {
+            padding-top: 0px !important;
+            padding-bottom: 20px !important;
+            background: transparent !important;
+        }
+
+        .copy-right_text {
+            padding-top: 20px !important;
+            padding-bottom: 20px !important;
+            background: #230c35 !important;
+        }
+
+        .single_slider {
+            height: 500px !important;
+        }
+
+        @media (max-width: 768px) {
+            .single_slider {
+                height: 400px !important;
+            }
+        }
+
+        .single_slider.overlay2::before {
+            background: rgba(20, 5, 30, 0.85) !important;
+            opacity: 1 !important;
+            z-index: 1;
+        }
+
+        .slider_text {
+            z-index: 2;
+            position: relative;
+        }
+
+        #sticky-header.sticky {
+            background: #2a0f3f !important;
+        }
+
+        .footer_border {
+            border-color: rgba(255, 255, 255, 0.15) !important;
+        }
+
+        .footer a, .footer p, .footer h3 {
+            color: #ffffff !important;
+        }
+
+        .footer a:hover {
+            color: #9b51e0 !important;
+        }
+
+        /* --- NUEVOS ESTILOS ESENCIALES PARA LA GALERÍA --- */
+        .gallery_item {
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .gallery_item img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            display: block;
+            transition: 0.5s;
+        }
+
+        .gallery_overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(42, 15, 63, 0.9);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: 0.4s;
+            text-decoration: none !important;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .gallery_item:hover .gallery_overlay {
+            opacity: 1;
+        }
+
+        .gallery_item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery_overlay p { 
+            color: #fff;
+            font-style: italic;
+            font-size: 16px;
+            margin-bottom: 10px; 
+            transform: translateY(20px);
+            transition: 0.4s; 
+        }
+
+        .gallery_overlay span { 
+            color: #9b51e0;
+            font-weight: 700;
+            font-size: 13px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transform: translateY(20px);
+            transition: 0.5s;
+        }
+
+        .gallery_item:hover .gallery_overlay p, 
+        .gallery_item:hover .gallery_overlay span {
+            transform: translateY(0);
+        }
+        .footer,
+        .footer_top,
+        .copy-right_text {
+            background-color: #2a0f3f !important; /* púrpura profundo */
+        }
+        .about_thumb {
+            position: relative;
+        }
+
+        .about_thumb img {
+            width: 150%;
+            max-width: none;
+            position: relative;
+            left: -180px;
+            transform: translateX(-50px) translateY(-30px);
+        }
+
+        /* --- ESTILOS RESTAURADOS PARA EL TEXTO (SEGÚN TU IMAGEN) --- */
+        .ame-title {
+            color: #800080; /* Tono amatista oscuro */
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 25px;
+        }
+        
+        .ame-quote-box {
+            border-left: 3px solid #9b51e0; /* La línea vertical violeta */
+            padding-left: 20px;
+            margin-bottom: 30px;
+            font-style: italic;
+            color: #555;
+            font-weight: 500;
+        }
+
+        .ame-subtitle {
+            color: #9b51e0; /* Violeta claro */
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+            font-size: 14px;
+            margin-top: 35px;
+            margin-bottom: 15px;
+        }
+
+        .ame-text {
+            color: #707070;
+            font-size: 15px;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .ame-highlight {
+            color: #800000; /* Tono rojizo/violeta oscuro como la imagen */
+            font-weight: 700;
+        }
+
+        .ame-bold-black {
+            color: #000;
+            font-weight: 700;
+        }
+        
+        /* ESTILOS DEL BOTÓN DE IDIOMA */
+        .lang-switch-container {
+            position: fixed;
+            bottom: 20px;
+            left: 20px; /* Lo pongo a la izquierda para no tapar el chat o botón de subir */
+            z-index: 9999;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .lang-btn-main {
+            background: #6E154F; /* Tu color violeta */
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .lang-btn-main:hover {
+            background: #4a0d34;
+            transform: scale(1.05);
+        }
+
+        .lang-options {
+            display: none; /* Oculto por defecto */
+            flex-direction: column;
+            position: absolute;
+            bottom: 50px;
+            left: 0;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            min-width: 120px;
+        }
+
+        .lang-options button {
+            background: white;
+            border: none;
+            padding: 10px;
+            text-align: left;
+            width: 100%;
+            cursor: pointer;
+            border-bottom: 1px solid #eee;
+            color: #333;
+        }
+
+        .lang-options button:hover {
+            background: #f0f0f0;
+            color: #6E154F;
+        }
+
+        /* Clase para mostrar el menú */
+        .show-lang {
+            display: flex;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-area ">
+            <div id="sticky-header" class="main-header-area">
+                <div class="container-fluid">
+                    <div class="header_bottom_border">
+                        <div class="row align-items-center">
+                            <div class="col-xl-3 col-lg-2">
+                                <div class="logo">
+                                    <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
+                                        <img src="img/Amethystos-logo.png" alt="Amethystos Logo" 
+                                             style="max-height: 90px; width: auto; border-radius: 50%; border: 2px solid rgba(255,255,255,0.15); margin-right: 20px;">
+                                        <span style="color: #ffffff; font-size: 28px; font-family: 'Garamond', 'Georgia', 'Times New Roman', serif; font-weight: 400; letter-spacing: 6px; text-transform: uppercase;">
+                                            PMFM
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-7">
+                                <div class="main-menu  d-none d-lg-block">
+                                    <nav>
+                                        <ul id="navigation">
+                                            <li><a class="active" href="index.html" data-i18n="menu_home">Inicio</a></li>
+                                            <li><a href="aboutpf.html" data-i18n="menu_about">Sobre Mí</a></li>
+                                            <li><a href="track.html" data-i18n="menu_music">Música</a></li>
+                                            <li><a href="mygalery.html" data-i18n="menu_gallery">Galería</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            
+                            <div class="col-xl-3 col-lg-3 d-none d-lg-block">
+                                <div class="social_icon text-right">
+                                    <ul>
+                                        <li><a href="https://open.spotify.com/intl-es/artist/0zDPwGObZyLmZrEGTw8aWN?si=XFyIAQO6QdWBp8bghQ9x7Q" target="_blank" class="platform-btn btn-spotify" title="Spotify"><i class="fa fa-spotify"></i></a></li>
+                                        <li><a href="https://www.youtube.com/@amethystospmfm" target="_blank" class="platform-btn btn-youtube" title="YouTube"><i class="fa fa-youtube-play"></i></a></li>
+                                        <li><a href="https://music.apple.com/es/artist/amethystos/1565143172" target="_blank" class="platform-btn btn-apple" title="Apple Music"><i class="fa fa-apple"></i></a></li>
+                                        <li><a href="https://music.amazon.es/artists/B093TL82TT/amethystos" target="_blank" class="platform-btn btn-amazon" title="Amazon Music"><i class="fa fa-amazon"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="col-12">
+                                <div class="mobile_menu d-block d-lg-none"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </header>
+    <div class="slider_area">
+        <div class="single_slider d-flex align-items-center slider_bg_1 overlay2" style="background-image: url(img/Banner-Provisorio.jpg); background-size: cover; background-position: center;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="slider_text text-center" style="margin-top: -50px;">
+                            <h3 data-i18n="gallery_hero_title" style="font-family: 'Garamond', 'Georgia', serif; font-weight: 400; font-size: 60px; letter-spacing: 4px; text-shadow: 2px 2px 10px #000000; margin-bottom: 10px; color: #fff;">
+                               Galería
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="gallery_area" style="padding: 80px 0; background: #fff;">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="section_title text-center mb-65">
+                    <h2 data-i18n="gallery_section_title" style="font-family: 'Poppins', sans-serif; color: #6E154F; letter-spacing: 2px; text-transform: uppercase; font-weight: 700;">
+                        Arquitectura del Silencio
+                    </h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            
+            <div class="col-lg-6 col-md-6">
+                <div class="gallery_item" >
+                    <img src="img/gallery/inspiracion/inspiracion1.jpeg" alt="Luz y Materia" style="width: 100%;">
+                    <a href="img/gallery/inspiracion/inspiracion1.jpeg" class="popup-image gallery_overlay">
+                        <div class="hover_inner">
+                            <i class="ti-plus"></i> </div>
+                        <p data-i18n="gal_img1_text">Donde la luz penetra la materia y nace el espíritu.</p>
+                        <span data-i18n="gal_img1_label">ILUMINACIÓN</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6">
+                <div class="gallery_item">
+                    <img src="img/gallery/inspiracion/inspiracion2.jpeg" alt="Silencio Interior" style="width: 100%;">
+                    <a href="img/gallery/inspiracion/inspiracion2.jpeg" class="popup-image gallery_overlay">
+                        <div class="hover_inner">
+                            <i class="ti-plus"></i>
+                        </div>
+                        <p data-i18n="gal_img2_text">El silencio interior: el único lugar donde se escucha el alma.</p>
+                        <span data-i18n="gal_img2_label">INTROSPECCIÓN</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6">
+                <div class="gallery_item">
+                    <img src="img/gallery/inspiracion/inspiracion3.jpeg" alt="Perspectiva" style="width: 100%;">
+                    <a href="img/gallery/inspiracion/inspiracion3.jpeg" class="popup-image gallery_overlay">
+                        <div class="hover_inner">
+                            <i class="ti-plus"></i>
+                        </div>
+                        <p data-i18n="gal_img3_text">Detenerse, respirar y observar el caos desde la calma.</p>
+                        <span data-i18n="gal_img3_label">PAUSA</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6">
+                <div class="gallery_item">
+                    <img src="img/gallery/inspiracion/inspiracion4.jpeg" alt="Umbral" style="width: 100%;">
+                    <a href="img/gallery/inspiracion/inspiracion4.jpeg" class="popup-image gallery_overlay">
+                        <div class="hover_inner">
+                            <i class="ti-plus"></i>
+                        </div>
+                        <p data-i18n="gal_img4_text">Cruzar el umbral hacia una nueva consciencia sonora.</p>
+                        <span data-i18n="gal_img4_label">TRANSICIÓN</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6">
+                <div class="gallery_item">
+                    <img src="img/gallery/inspiracion/inspiracion5.jpeg" alt="Geometría" style="width: 100%;">
+                    <a href="img/gallery/inspiracion/inspiracion5.jpeg" class="popup-image gallery_overlay">
+                        <div class="hover_inner">
+                            <i class="ti-plus"></i>
+                        </div>
+                        <p data-i18n="gal_img5_text">Ecos antiguos que resuenan en el presente.</p>
+                        <span data-i18n="gal_img5_label">MEMORIA</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+    
+
+    <footer class="footer">
+        <div class="footer_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-md-6">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">AMETHYSTOS</h3>
+                            <p data-i18n="footer_bio" class="sub_text" style="font-style: italic; margin-bottom: 20px;">
+                                La música de AMETHYSTOS PMFM nace del silencio interior. Cada obra es una exploración espiritual, una búsqueda de lo invisible a través del sonido. No hay rostro, no hay espectáculo: solo atmósfera, emoción y contemplación.
+                            </p>
+                            <div class="social_icon">
+                                <a href="https://www.paypal.com/paypalme/Pablomfm" target="_blank" class="boxed-btn" style="background: #0070BA; color: #ffffff !important; border-color: #0070BA; padding: 10px 20px; font-size: 14px;" title="PayPal">
+                                    <span data-i18n="footer_offering"><i class="fa fa-paypal"></i> Ofrenda (PayPal)</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-5 col-md-5 offset-xl-1">
+                        <div class="footer_widget">
+                            <h3 class="footer_title" data-i18n="contact_title">Contacto</h3>
+                            <ul>
+                                <li>
+                                    <a href="mailto:AMETHYSTOSPMFM@GMAIL.COM">
+                                        <i class="fa fa-envelope"></i> amethystospmfm@gmail.com
+                                    </a>
+                                </li>
+                            </ul>
+<div class="socail_links">
+    <ul>
+        <li>
+            <a href="https://www.facebook.com/people/Amethystos-Pmfm/100067537028735/" target="_blank" class="social-fb" title="Facebook">
+                <i class="fa fa-facebook"></i>
+            </a>
+        </li>
+        <li>
+            <a href="https://www.instagram.com/amethystospmfm/" target="_blank" class="social-ig" title="Instagram">
+                <i class="fa fa-instagram"></i>
+            </a>
+        </li>
+        
+<li>
+    <a href="https://www.tiktok.com/@amethystospmfm" target="_blank" title="TikTok"
+       style="display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; background-color: #ffffff; border-radius: 50%; vertical-align: middle; text-decoration: none;">
+        
+        <img src="img/gallery/tik-tok.png" alt="TikTok" style="width: 24px; height: auto; border: none;">
+    </a>
+</li>
+        
+    </ul>
+</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="copy-right_text">
+            <div class="container">
+                <div class="footer_border"></div>
+                <div class="row">
+                    <div class="col-xl-7 col-md-6">
+<p class="copy_right" data-i18n="copyright_text">
+    Copyright ©<script>document.write(new Date().getFullYear());</script> AMETHYSTOS PMFM | Todos los derechos reservados.
+    <br> Plantilla creada por <a href="https://colorlib.com" target="_blank" style="color: #ccc; font-size: 12px; text-decoration: none;">Colorlib</a> 
+    | Imagen del banner: arte digital · autor no identificado.
+</p>
+                    </div>
+                    <div class="col-xl-5 col-md-6">
+                        <div class="footer_links">
+                            <ul>
+                                <li><a href="index.html" data-i18n="menu_home">Inicio</a></li>
+                                <li><a href="aboutpf.html" data-i18n="menu_about">Sobre Mí</a></li>
+                                <li><a href="track.html" data-i18n="menu_music">Música</a></li>
+                                <li><a href="mygalery.html" data-i18n="menu_gallery">Galería</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('.popup-image').magnificPopup({
+                type: 'image',
+                gallery: {
+                    enabled: true
+                }
+            });
+        });
+    </script>
+
+    <div class="lang-switch-container">
+        <button onclick="toggleLangMenu()" class="lang-btn-main">🌐 Idioma / Language</button>
+        <div id="lang-options" class="lang-options">
+            <button onclick="changeLanguage('es')">🇪🇸 Español</button>
+            <button onclick="changeLanguage('en')">🇺🇸 English</button>
+            <button onclick="changeLanguage('ru')">🇷🇺 Русский</button>
+        </div>
+    </div>
+
+    <script>
+        // 1. DICCIONARIO COMPLETO (Galería de Inspiración)
+        const translations = {
+            es: {
+                "menu_home": "Inicio",
+                "menu_about": "Sobre Mí",
+                "menu_music": "Música",
+                "menu_gallery": "Galería",
+                
+                "gallery_hero_title": "Galería",
+                "gallery_section_title": "Arquitectura del Silencio",
+                
+                "gal_img1_text": "Donde la luz penetra la materia y nace el espíritu.",
+                "gal_img1_label": "ILUMINACIÓN",
+                
+                "gal_img2_text": "El silencio interior: el único lugar donde se escucha el alma.",
+                "gal_img2_label": "INTROSPECCIÓN",
+                
+                "gal_img3_text": "Detenerse, respirar y observar el caos desde la calma.",
+                "gal_img3_label": "PAUSA",
+                
+                "gal_img4_text": "Cruzar el umbral hacia una nueva consciencia sonora.",
+                "gal_img4_label": "TRANSICIÓN",
+                
+                "gal_img5_text": "Ecos antiguos que resuenan en el presente.",
+                "gal_img5_label": "MEMORIA",
+
+                "footer_bio": "La música de AMETHYSTOS PMFM nace del silencio interior. Cada obra es una exploración espiritual, una búsqueda de lo invisible a través del sonido. No hay rostro, no hay espectáculo: solo atmósfera, emoción y contemplación.",
+                "footer_offering": "Ofrenda (PayPal)",
+                "contact_title": "Contacto",
+                "copyright_text": "Todos los derechos reservados."
+            },
+            en: {
+                "menu_home": "Home",
+                "menu_about": "About Me",
+                "menu_music": "Music",
+                "menu_gallery": "Gallery",
+                
+                "gallery_hero_title": "Gallery",
+                "gallery_section_title": "Architecture of Silence",
+                
+                "gal_img1_text": "Where light penetrates matter and spirit is born.",
+                "gal_img1_label": "ILLUMINATION",
+                
+                "gal_img2_text": "Inner silence: the only place where the soul is heard.",
+                "gal_img2_label": "INTROSPECTION",
+                
+                "gal_img3_text": "Stop, breathe, and observe the chaos from calm.",
+                "gal_img3_label": "PAUSE",
+                
+                "gal_img4_text": "Crossing the threshold into a new sonic consciousness.",
+                "gal_img4_label": "TRANSITION",
+                
+                "gal_img5_text": "Ancient echoes resonating in the present.",
+                "gal_img5_label": "MEMORY",
+
+                "footer_bio": "The music of AMETHYSTOS PMFM is born from inner silence. Each work is a spiritual exploration, a search for the invisible through sound. No face, no spectacle: only atmosphere, emotion, and contemplation.",
+                "footer_offering": "Offering (PayPal)",
+                "contact_title": "Contact",
+                "copyright_text": "All rights reserved."
+            },
+            ru: {
+                "menu_home": "Главная",
+                "menu_about": "Обо мне",
+                "menu_music": "Музыка",
+                "menu_gallery": "Галерея",
+                
+                "gallery_hero_title": "Галерея",
+                "gallery_section_title": "Архитектура тишины",
+                
+                "gal_img1_text": "Где свет проникает в материю и рождается дух.",
+                "gal_img1_label": "ОЗАРЕНИЕ",
+                
+                "gal_img2_text": "Внутренняя тишина: единственное место, где слышна душа.",
+                "gal_img2_label": "САМОАНАЛИЗ",
+                
+                "gal_img3_text": "Остановиться, вдохнуть и наблюдать за хаосом из спокойствия.",
+                "gal_img3_label": "ПАУЗА",
+                
+                "gal_img4_text": "Переступить порог к новому звуковому сознанию.",
+                "gal_img4_label": "ПЕРЕХОД",
+                
+                "gal_img5_text": "Древние эхо, резонирующие в настоящем.",
+                "gal_img5_label": "ПАМЯТЬ",
+
+                "footer_bio": "Музыка AMETHYSTOS PMFM рождается из внутренней тишины. Каждое произведение — это духовное исследование, поиск невидимого через звук. Никаких лиц, никакого зрелища: только атмосфера, эмоции и созерцание.",
+                "footer_offering": "Пожертвование (PayPal)",
+                "contact_title": "Контакты",
+                "copyright_text": "Все права защищены."
+            }
+        };
+
+        // 2. FUNCIÓN DE CAMBIO DE IDIOMA
+        function changeLanguage(lang) {
+            localStorage.setItem('selectedLang', lang);
+            const elements = document.querySelectorAll('[data-i18n]');
+            
+            elements.forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[lang][key]) {
+                    if (element.childNodes.length === 1 && element.childNodes[0].nodeType === 3) {
+                         element.innerText = translations[lang][key];
+                    } else {
+                        if(key === 'footer_offering') {
+                            element.innerHTML = '<i class="fa fa-paypal"></i> ' + translations[lang][key];
+                        } else if (key === 'copyright_text') {
+                            const year = new Date().getFullYear();
+                            element.innerHTML = `Copyright ©${year} AMETHYSTOS PMFM | ${translations[lang][key]} <br> Plantilla creada por <a href="https://colorlib.com" target="_blank" style="color: #ccc; font-size: 12px; text-decoration: none;">Colorlib</a> | Imagen del banner: arte digital · autor no identificado.`;
+                        } else {
+                             element.innerHTML = translations[lang][key];
+                        }
+                    }
+                }
+            });
+            document.getElementById('lang-options').classList.remove('show-lang');
+        }
+
+        function toggleLangMenu() {
+            document.getElementById('lang-options').classList.toggle('show-lang');
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('selectedLang') || 'es'; 
+            changeLanguage(savedLang);
+        });
+        // Template made by Colorlib -- Customized by Rodriguez Joaquin. 18/01/26 //
+    </script>
+</body>
+
+</html>
