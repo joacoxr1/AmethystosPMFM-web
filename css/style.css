@@ -7311,26 +7311,27 @@ h6 {
   margin-right: 10px;
   font-size: 12px;
 }
-/* --- AJUSTES PARA CELULAR Y TABLET (RESPONSIVE) --- */
-@media only screen and (max-width: 991px) { /* <--- CAMBIO AQUÍ: De 768 a 991 */
-    
-    /* Achicar el título gigante */
-    .hero-area .hero-text h1 {
-        font-size: 40px !important; /* Tamaño seguro para móvil y tablet */
-        line-height: 1.2 !important;
-        margin-bottom: 15px;
-    }
-    
-    /* Ajustar el texto de abajo */
-    .hero-area .hero-text p {
-        font-size: 16px !important;
+/* --- CÓDIGO NUCLEAR PARA CELULARES --- */
+@media screen and (max-width: 991px) {
+    /* Fuerza BRUTA al título principal */
+    h1, .hero-area h1, .hero-text h1 {
+        font-size: 28px !important; /* Letra mucho más chica */
+        line-height: 1.1 !important;
+        margin-top: 10px !important;
+        word-wrap: break-word; /* Evita que se salga de la pantalla */
     }
 
-    /* Dar espacio arriba para que no se pegue al techo */
+    /* Ajuste para el subtítulo */
+    p, .hero-area p {
+        font-size: 14px !important;
+        line-height: 1.4 !important;
+    }
+
+    /* Ajuste de altura del banner */
     .hero-area {
-        padding-top: 140px; /* Un poco más de aire arriba */
-        height: auto;
-        min-height: 100vh;
+        padding-top: 120px !important;
+        min-height: auto !important;
+        padding-bottom: 50px !important;
     }
 }
 
